@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi Toko Cabang - Meow Store Pet Shop</title>
+    <style>
+        /* Pengaturan Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F0E6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header Halaman */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color:#3E2723;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Grid untuk Kartu Cabang */
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Desain Kartu Cabang */
+        .branch-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            border-top: 5px solid #ff6b81;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .branch-header {
+            background-color: #fff0f3;
+            padding: 15px 20px;
+            font-weight: bold;
+            color: #d63031;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .badge {
+            background-color: #ff6b81;
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 20px;
+        }
+
+        .badge.pusat {
+            background-color: #0984e3;
+        }
+
+        .branch-body {
+            padding: 20px;
+        }
+
+        .branch-body p {
+            margin: 10px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .branch-body strong {
+            color: #444;
+        }
+
+        /* Tombol Aksi */
+        .branch-footer {
+            padding: 15px 20px;
+            background-color: #f1f2f6;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-maps {
+            background-color: #00b894;
+            color: white;
+        }
+
+        .btn-maps:hover {
+            background-color: #00a884;
+        }
+
+        .btn-wa {
+            background-color: #0984e3;
+            color: white;
+        }
+
+        .btn-wa:hover {
+            background-color: #0773c5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Judul -->
+        <div class="header">
+            <h1>🐾 Lokasi Toko Cabang Kami</h1>
+            <p>Kunjungi pet shop terdekat untuk mengadopsi anabul kesayangan.</p>
+        </div>
+
+        <!-- Bagian Daftar Cabang (Grid) -->
+        <div class="branch-grid">
+
+            <!-- Cabang 1: Pusat -->
+            <div class="branch-card">
+                <div class="branch-header">
+                    Pet Shop Pusat (Gudang)
+                    <span class="badge pusat">Pusat</span>
+                </div>
+                <div class="branch-body">
+                    <p><strong>Alamat:</strong>Jl. Ir. H. Juanda Jl. Dagopojok No.38, Dago, Kecamatan Coblong, Kota Bandung, Jawa Barat 40135</p>
+                    <p><strong>Jam Operasional:</strong> 08.00 - 16.00 WIB</p>
+                    <p><strong>Layanan:</strong>Toko utama untuk melihat anabul secara langsung</p>
+                    <p><strong>Telepon:</strong>085860449910</p>
+                </div>
+                <div class="branch-footer">
+                   <a href="https://maps.app.goo.gl/SgbJRGs44VmyQqUd8" target="_blank" class="btn btn-maps">Google Maps</a>
+                    <a href="https://wa.me/6285860449910" target="_blank" class="btn btn-wa">WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Cabang 2: Dago -->
+            <div class="branch-card" style="border-top-color: #e17055;">
+                <div class="branch-header" style="background-color: #fff5f2; color: #e17055;">
+                    Cabang Dago
+                    <span class="badge" style="background-color: #e17055;">Cabang</span>
+                </div>
+                <div class="branch-body">
+                    <p><strong>Alamat:</strong>Jl. Alternatif Cibubur No.230 A, Harjamukti, Kec. Cimanggis, Kota Depok, Jawa Barat 16454</p>
+                    <p><strong>Jam Operasional:</strong> 09.00 - 20.00 WIB</p>
+                    <p><strong>Layanan:</strong> Toko Produk & Aksesoris Kucing</p>
+                    <p><strong>Telepon:</strong>0858-6044-9910</p>
+                </div>
+                <div class="branch-footer">
+                    <a href="https://maps.app.goo.gl/PAWGVVNgPQdBbLSS6" target="_blank" class="btn btn-maps">Google Maps</a>
+                    <a href="https://wa.me/6285860449910" target="_blank" class="btn btn-wa">WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Cabang 3: Buah Batu -->
+            <div class="branch-card" style="border-top-color: #6c5ce7;">
+                <div class="branch-header" style="background-color: #f4f3ff; color: #6c5ce7;">
+                    Cabang Buah Batu
+                    <span class="badge" style="background-color: #6c5ce7;">Cabang</span>
+                </div>
+                <div class="branch-body">
+                    <p><strong>Alamat:</strong>Jl. Sosrowijayan No.23 - 25, Sosromenduran, Gedong Tengen, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55271</p>
+                    <p><strong>Jam Operasional:</strong> 09.00 - 15.00 WIB</p>
+                    <p><strong>Layanan:</strong> Toko Produk & Grooming Kucing</p>
+                    <p><strong>Telepon:</strong>0858-6044-9910</p>
+                </div>
+                <div class="branch-footer">
+                    <a href=https://maps.app.goo.gl/SgbJRGs44VmyQqUd8" target="_blank" class="btn btn-maps">Google Maps</a>
+                    <a href="https://wa.me/6285860449910" target="_blank" class="btn btn-wa">WhatsApp</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Supplier - Meow Store Pet Shop</title>
+    <style>
+        /* Pengaturan Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:#3E2723;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #F5F0E6;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Header Halaman */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-title h1 {
+            color: #ff6b81;
+            margin: 0 0 5px 0;
+            font-size: 24px;
+        }
+
+        .header-title p {
+            color: #666;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Tombol Tambah Supplier */
+        .btn-add {
+            background-color: #00b894;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-add:hover {
+            background-color: #00a884;
+        }
+
+        /* Tabel Supplier */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #fff0f3;
+            color: #d63031;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #fafafa;
+        }
+
+        /* Badge Kategori & Pembayaran */
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-food { background-color: #ffeaa7; color: #d63031; }
+        .badge-litter { background-color: #dfe6e9; color: #2d3436; }
+        .badge-acc { background-color: #a29bfe; color: white; }
+        .badge-vet { background-color: #55efc4; color: #00b894; }
+
+        .top-tag {
+            font-weight: 600;
+            color: #0984e3;
+        }
+
+        /* Tombol Aksi di Tabel */
+        .btn-action {
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        .btn-wa {
+            background-color: #3E2723;
+            color: white;
+        }
+
+        .btn-wa:hover {
+            background-color: #3E2723;
+        }
+
+        .btn-edit {
+            background-color: #fdcb6e;
+            color: #2d3436;
+        }
+
+        .btn-edit:hover {
+            background-color: #e1b12c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bagian Header & Judul -->
+        <div class="header">
+            <div class="header-title">
+                <h1>📦 Data Supplier & Pemasok</h1>
+                <p>Kelola daftar mitra penyedia produk, makanan, obat, dan aksesoris kucing.</p>
+            </div>
+            <a href="#" class="btn-add">+ Tambah Supplier Baru</a>
+        </div>
+
+        <!-- Bagian Tabel Data -->
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Perusahaan</th>
+                        <th>Kategori Produk</th>
+                        <th>Kontak Sales</th>
+                        <th>No. WhatsApp</th>
+                        <th>Kota</th>
+                        <th>Term of Payment (TOP)</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Baris 1 -->
+                    <tr>
+                        <td><strong>SPL-001</strong></td>
+                        <td>PT Pet Food Indonesia</td>
+                        <td><span class="badge badge-food">Makanan & Treat</span></td>
+                        <td>Bpk. Krating</td>
+                        <td>0858-6044-9910</td>
+                        <td>Jakarta Selatan</td>
+                        <td><span class="top-tag">Tempo 7 hari</span></td>
+                        <td>
+                            <a href="https://wa.me/6285860449910" target="_blank" class="btn-action btn-wa">Chat</a>
+                            <a href="#" class="btn-action btn-edit">Edit</a>
+                        </td>
+                    </tr>
+                    <!-- Baris 2 -->
+                    <tr>
+                        <td><strong>SPL-002</strong></td>
+                        <td>CV Sumber Pasir Wangi</td>
+                        <td><span class="badge badge-litter">Pasir & Kebersihan</span></td>
+                        <td>Ibu Neya</td>
+                        <td>0858-6044-9910</td>
+                        <td>Bandung</td>
+                        <td><span class="top-tag">Tempo 14 Hari</span></td>
+                        <td>
+                            <a href="https://wa.me/6285860449910" target="_blank" class="btn-action btn-wa">Chat</a>
+                            <a href="#" class="btn-action btn-edit">Edit</a>
+                        </td>
+                    </tr>
+                    <!-- Baris 3 -->
+                    <tr>
+                        <td><strong>SPL-003</strong></td>
+                        <td>UD Maju Aksesoris Kucing</td>
+                        <td><span class="badge badge-acc">Mainan & Aksesoris</span></td>
+                        <td>Bpk. Joss</td>
+                        <td>0858-6044-9910</td>
+                        <td>Surabaya</td>
+                        <td><span class="top-tag">Tempo 30 Hari</span></td>
+                        <td>
+                            <a href="https://wa.me/6285860449910" target="_blank" class="btn-action btn-wa">Chat</a>
+                            <a href="#" class="btn-action btn-edit">Edit</a>
+                        </td>
+                    </tr>
+                    <!-- Baris 4 -->
+                    <tr>
+                        <td><strong>SPL-004</strong></td>
+                        <td>Mitra Vet & Farmasi</td>
+                        <td><span class="badge badge-vet">Vitamin & Obat</span></td>
+                        <td>drh. Gawin</td>
+                        <td>0858-6044-9910</td>
+                        <td>Surabaya</td>
+                        <td><span class="top-tag">Tunai (Diskon 5%)</span></td>
+                        <td>
+                            <a href="https://wa.me/6285860449910" target="_blank" class="btn-action btn-wa">Chat</a>
+                            <a href="#" class="btn-action btn-edit">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
